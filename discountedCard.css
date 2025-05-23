@@ -1,0 +1,167 @@
+/* Discounted Cards Section */
+.discounted-cards {
+  background: none; /* Light blue background */
+  padding: 50px 20px;
+  text-align: center;
+}
+
+/* Premium Packages Section */
+.discounted-cards h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #000080; /* Changed from #1e88e5 to navy blue #000080 */
+  margin-bottom: 10px;
+}
+
+.discounted-cards .subtitle {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 20px;
+  font-weight: 300;
+  text-align: center;
+}
+
+/* Line below heading and description */
+.discounted-cards .line-divider {
+  width: 80%; /* Adjust width as needed */
+  max-width: 600px; /* Line will not exceed this width */
+  height: 2px;
+  background: linear-gradient(to right, transparent, #000080, transparent); /* Changed from #1e88e5 to navy blue #000080 */
+  margin: 15px auto 50px; /* Increased bottom margin to add space before the cards */
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+  gap: 40px; /* Increased space between cards */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card:hover {
+  transform: scale(1.05); /* Subtle hover effect */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+  background: #000080; /* Changed from #1e88e5 to navy blue #000080 */
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.price {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #000080; /* Changed from #1e88e5 to navy blue #000080 */
+  margin-bottom: 15px;
+}
+
+.price .original-price {
+  font-size: 1rem;
+  color: #888;
+  text-decoration: line-through;
+  margin-left: 10px;
+}
+
+.features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+  text-align: left;
+  width: 100%;
+  color: #555;
+}
+
+.features li {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.features li::before {
+  content: "✔"; /* Checkmark */
+  color: #000080; /* Changed from #1e88e5 to navy blue #000080 */
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.order-button {
+  background: #000080; /* Changed from #1e88e5 to navy blue #000080 */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.order-button:hover {
+  background: #000066; /* Changed from #1565c0 to darker navy blue */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Highlighted Card */
+.card.popular {
+  border: 2px solid #000080; /* Changed from #1e88e5 to navy blue #000080 */
+  position: relative;
+  transform: scale(1.1); /* Slightly larger than other cards */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* More pronounced shadow */
+  z-index: 1; /* Ensure it appears above other cards */
+  transition: all 0.3s ease; /* Smooth transition */
+}
+
+/* Ensure hover effect works consistently */
+.card.popular:hover {
+  transform: scale(1.15); /* Further scaling on hover */
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25); /* More elevated shadow */
+}
+
+/* Popular Badge */
+.popular-badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: #000080; /* Changed from #1e88e5 to navy blue #000080 */
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .discounted-cards h2 {
+      font-size: 2rem;
+  }
+
+  .card-grid {
+      grid-template-columns: 1fr; /* Single column layout for smaller screens */
+  }
+
+  .card {
+      width: 100%;
+  }
+}

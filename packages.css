@@ -1,0 +1,293 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f9f9fc;
+}
+
+/* Table Container */
+.table-container {
+    margin: 40px auto; /* Increased top and bottom margin to add spacing between tables */
+    max-width: 1200px; /* Increased width to match upper cards */
+    border-radius: 12px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Table Header */
+.table-header {
+    background: #000080; /* Changed from #1e88e5 to navy blue #000080 */
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+.table-header h2 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.table-header i {
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+/* Table */
+.table {
+    width: 100%;
+    border-spacing: 0;
+}
+
+.table-row {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    margin: 0; /* Removed 10px margin to eliminate space between rows */
+    background: #fff; /* White background for rows */
+    border-radius: 0; /* Removed rounded corners for more compact look */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Subtle shadow for rows */
+    flex-wrap: wrap; /* Allow wrapping for the product description */
+    position: relative; /* For positioning purposes */
+}
+
+/* Product Column */
+.product {
+    display: flex;
+    align-items: center;
+    flex: 5;
+}
+
+/* Standardize icon colors across all tables */
+.product-icon,
+.bm-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+    border-radius: 50%;
+    background-color: #000080; /* Changed from #1877F2 to navy blue #000080 */
+    border: none;
+    color: white;
+    padding: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-icon i,
+.bm-icon i {
+    color: white;
+    font-size: 18px;
+}
+
+.product-text {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+}
+
+/* Product Info Styling */
+.product-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.region {
+    font-size: 12px;
+    color: #777;
+    margin-top: 3px;
+}
+
+/* Stock Column - Removed background color */
+.stock {
+    flex: 1.5;
+    text-align: center;
+    background: transparent; /* Changed from #f6f8fb to transparent */
+    border-radius: 8px;
+    padding: 5px 10px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Price Column - Removed background color */
+.price {
+    flex: 2;
+    text-align: center;
+    background: transparent; /* Changed from #f6f8fb to transparent */
+    border-radius: 8px;
+    padding: 5px 10px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #000080; /* Changed price text color to navy blue #000080 */
+}
+
+/* Action Column */
+.action {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 2;
+}
+
+.buy-btn {
+    background: #000080; /* Changed from #333 to navy blue #000080 */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.buy-btn:hover {
+    background: #000066; /* Slightly darker navy blue on hover */
+}
+
+/* Out of Stock Button */
+.buy-btn.out-of-stock {
+    background-color: #9e9e9e;
+    cursor: not-allowed;
+}
+
+/* New circular dropdown icon */
+.circular-dropdown {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.circular-dropdown:hover {
+    background-color: #f0f0f0;
+}
+
+.circular-dropdown i {
+    transition: transform 0.3s ease;
+}
+
+/* Rotate icon when active */
+.circular-dropdown.active i {
+    transform: rotate(180deg);
+}
+
+/* Removing the old dropdown icon */
+.dropdown-icon {
+    display: none;
+}
+
+/* Product Description */
+.product-description {
+    display: none; /* Hide by default */
+    width: 100%;
+    padding: 20px;
+    background: #f9f9fc;
+    border-radius: 8px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #555;
+    text-align: justify; /* Justify the text */
+    position: relative;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1); /* Add subtle shadow */
+}
+
+/* Add a visual separator at the bottom of the description */
+.product-description::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 5%;
+    width: 90%;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #ddd, transparent);
+}
+
+/* Title for product description */
+.description-title {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #000080; /* Changed from #333 to navy blue #000080 */
+}
+
+/* Show product description when active */
+.product-description.active {
+    display: block;
+}
+
+/* Description paragraph */
+.product-description p {
+    margin: 0;
+    padding: 0;
+    text-align: justify;
+}
+
+/* UPDATED Popular Badge - Diagonal at Top Left with black background */
+.card.popular {
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #000080; /* Changed from #1e88e5 to navy blue #000080 */
+}
+
+.popular-badge {
+    position: absolute;
+    top: 20px;
+    left: -60px;
+    width: 200px;
+    background-color: #000000; /* Black background as requested */
+    color: #ffffff; /* White text */
+    font-size: 14px;
+    font-weight: bold;
+    padding: 5px 0;
+    text-align: center;
+    transform: rotate(-45deg);
+    z-index: 10;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Additional style to ensure the ribbon appears correctly */
+.card.popular::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    z-index: 5;
+    pointer-events: none; /* Prevents this from blocking clicks */
+}
+
+/* Additional Mobile Responsiveness */
+@media (max-width: 768px) {
+    .product-info {
+        max-width: 200px;
+    }
+    
+    .table-row {
+        padding: 10px;
+    }
+    
+    .region {
+        display: block;
+        margin-top: 2px;
+    }
+    
+    .popular-badge {
+        font-size: 12px;
+        padding: 4px 0;
+        top: 15px;
+        left: -55px;
+        width: 180px;
+    }
+}

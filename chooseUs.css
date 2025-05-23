@@ -1,0 +1,119 @@
+/* General Styles for "Why Choose Us" Section */
+.wcus-section {
+    padding: 50px 20px;
+    text-align: center;
+    background: transparent;
+    position: relative;
+}
+  
+.wcus-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+  
+/* Section Title */
+.wcus-title {
+    font-size: 38px;
+    font-weight: 700;
+    color: #000080; /* Changed from #1877F2 to navy blue #000080 */
+    margin-bottom: 15px;
+}
+
+/* Subtitle */
+.wcus-subtitle {
+    font-size: 18px;
+    font-weight: 400;
+    color: #6c757d; /* Gray color for subtitle */
+    margin-bottom: 25px;
+}
+
+/* Updated divider to match the FAQ section divider in the image - now BOLDER */
+.wcus-divider {
+    width: 80%;
+    max-width: 800px;
+    height: 3px; /* Increased from 2px to 3px to make it bolder */
+    background: linear-gradient(to right, transparent, #000080, transparent); /* Gradient line with navy blue */
+    margin: 10px auto 40px;
+    display: block;
+    clear: both;
+    border-radius: 3px; /* Added slight rounding to make the thicker line look nicer */
+}
+
+/* Card Grid */
+.wcus-card-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding-top: 15px;
+}
+
+/* Card */
+.wcus-card {
+    flex: 1;
+    max-width: 360px;
+    background: white;
+    padding: 30px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+  
+.wcus-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+  
+/* Icon Container */
+.wcus-icon-container {
+    width: 80px;
+    height: 80px;
+    background: #000080; /* Changed from #1877F2 to navy blue #000080 */
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    margin: 0 auto 20px;
+}
+  
+/* Card Title */
+.wcus-card-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 15px;
+}
+  
+/* Card Description */
+.wcus-card-description {
+    font-size: 14px;
+    font-weight: 400;
+    color: #666;
+    line-height: 1.6;
+    padding: 0 15px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .wcus-title {
+        font-size: 30px;
+    }
+    
+    .wcus-card-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .wcus-card {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .wcus-divider {
+        width: 90%;
+    }
+}
